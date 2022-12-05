@@ -202,7 +202,7 @@ footer p {
 .tempInformation {
     width: 30rem;
     margin: auto;
-    height: 20rem;
+    height: 30rem;
     background-color: #323544;
     border-radius: 1rem;
     font-family: "Roboto", sans-serif;
@@ -221,9 +221,10 @@ footer p {
 .top_layer p {
     color:#fff;
     font-weight: 300;
-    padding: 2rem;
+    padding: 3rem;
     font-size: 1.5rem;
-    }
+}
+
 .main_layer {
     width: 100%;
     height: 80%;

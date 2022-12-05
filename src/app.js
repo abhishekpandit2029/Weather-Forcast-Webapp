@@ -17,7 +17,8 @@ app.use(express.static(static_path))
 
 
 //routing
-//Hello bro swapnil Watkar
+//yo
+
 app.get("/", (req,res)=>{
     res.render("index.hbs")
 })
