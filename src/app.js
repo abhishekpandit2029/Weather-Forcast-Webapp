@@ -15,10 +15,6 @@ hbs.registerPartials(partials_path)
 
 app.use(express.static(static_path))
 
-
-//routing
-//yo
-
 app.get("/", (req,res)=>{
     res.render("index.hbs")
 })
