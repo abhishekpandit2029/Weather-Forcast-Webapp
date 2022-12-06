@@ -40,7 +40,7 @@ body{
     left: 0;
     z-index: 1;
     background-color: var(--main-bg);
-    padding: 1rem 8rem;
+    padding: 1rem 12rem;
 }
 
 .navtitle{
@@ -54,7 +54,7 @@ body{
 }
 
 .navbar li{
-    margin: 10px;
+    margin: 5px 10px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -67,7 +67,7 @@ body{
 }
 
 .navbar-toggler {
-    background-color: grey;
+    background-color: white;
     width: 4rem;
     height: 3rem;
 }
@@ -89,9 +89,6 @@ body{
 
 /* ------------------------------ Main Header CSS--------------------------- */
 
-.main_header{
-    height: 100vh;
-}
 
 .main_header_left{
     height: 100vh;
@@ -130,12 +127,11 @@ body{
 
 .main_header_right{
     /* border: 5px solid black; */
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 2rem;
 }
 
 .carousel-img{
@@ -158,6 +154,7 @@ footer p {
     font-size: 1.4rem;
 }
 
+
 @media (max-width: 768px) {
     .main_header_left {
         height: auto;
@@ -170,12 +167,19 @@ footer p {
         height: 45rem;
     }
     .navbar{
-        padding: 1.5rem 3.5rem;
+        padding: 1.5rem 6rem;
     }
     .carousel-img{
         max-height: 40rem;
     }
 }
+
+@media (max-width: 400px) {
+    .navbar{
+        padding: 1.5rem 3rem;
+    }
+}
+
 
 /* ------------------------------ Weather CSS --------------------------- */
 
@@ -196,7 +200,7 @@ footer p {
 .top_layer {
     /* border: 5px solid black; */
     width: 100%;
-    height: 20%;
+    height: 25%;
     background-color: #2d303d;
     display: flex;
     flex-direction: row;
@@ -214,11 +218,12 @@ footer p {
 }
 
 .main_layer {
+    /* border: 5px solid black; */
     width: 100%;
-    height: 80%;
+    height: 70%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
 }
 
 .main_layer #city_name {
@@ -230,14 +235,13 @@ footer p {
 .main_layer .middle_layer {
     display: flex;
     justify-content: space-around;
-    color:#fff;
-    padding: 2rem;
+    color:#fff; 
 }
 
 .main_layer .middle_layer p,
 .main_layer .middle_layer .faicon,
 .main_layer .middle_layer .sup {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 900;
 }
 
@@ -246,8 +250,12 @@ footer p {
 }
 
 sup{
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: -2rem;
+}
+
+#navsup{
+    font-size: 2rem;
 }
 
 .data_hide{
@@ -256,7 +264,16 @@ sup{
 }
 
 .celcius{
-    margin-right: 2rem;
+    margin-right: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .tempInformation {
+        height: 20rem;
+    }
+    .main_layer {
+        padding: 2rem 3rem;
+    }
 }
 
     
@@ -312,7 +329,6 @@ sup{
     }
     .about-img{
         /* border: 5px solid black; */
-        height: auto; 
         max-width: 35rem;
         position: relative;
         top: -2rem;
