@@ -7,6 +7,7 @@ const data_hide = document.querySelector('.middle_layer')
 const daytoday = document.getElementById("daytoday")
 const today_date = document.getElementById("today_date")
 const month = document.getElementById("month")
+const year = document.getElementById("year")
 
 
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -15,6 +16,7 @@ let d = new Date();
 let day = d.getDay();
 let cmonth = d.getMonth()
 month.innerHTML = months[cmonth]
+year.innerHTML = d.getFullYear();
 today_date.innerHTML = d.getDate() 
 daytoday.innerHTML = days[day];
 

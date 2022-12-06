@@ -17,15 +17,17 @@ html {
     /* 1rem = 10px */
 }
 
-/* body{
-    height: 100vh;
+body{
+    height: 100%;
     display: flex;
     flex-direction: column;
-} */
+}
 
 .row{
     margin: 0;
 }
+
+/* ------------------------------ Navbar CSS --------------------------- */
 
 .main_menu{
     background-color: var(--main-bg);
@@ -36,9 +38,7 @@ html {
     top: 0;
     width: 100%;
     left: 0;
-
     z-index: 1;
-
     background-color: var(--main-bg);
     padding: 1rem 8rem;
 }
@@ -87,10 +87,11 @@ html {
     }
 }
 
+/* ------------------------------ Main Header CSS--------------------------- */
 
-
-/* main header */
-
+.main_header{
+    height: 100vh;
+}
 
 .main_header_left{
     height: 100vh;
@@ -98,7 +99,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* border: 1px solid black; */
 }
 
 .main_header_left p{
@@ -120,7 +120,6 @@ html {
     padding: 0.8rem 1.8rem;
     font-size: 1.4rem;
     border-radius: 2rem;
-    text-transform: uppercase;
     box-shadow: 0 8px 6px -6px #000;
     outline: none;
 }
@@ -130,26 +129,22 @@ html {
 }
 
 .main_header_right{
+    /* border: 5px solid black; */
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* border: 1px solid black; */
+    margin-top: 2rem;
 }
 
 .carousel-img{
-    height: 60rem;
+    height: 50rem;
 }
 
-/* footer code */
+/* ------------------------------ Footer CSS --------------------------- */
+
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-
-
     width: 100%;
     background-color: var(--main-bg);
     margin-top: auto;
@@ -166,53 +161,46 @@ footer p {
 @media (max-width: 768px) {
     .main_header_left {
         height: auto;
-        padding: 15rem 0rem 0rem;
+        padding: 13rem 0rem 0rem;
     }
     .main_header_right{
-        height: 40rem;
+        height: 38rem;
     }
     .carousel-img{
         height: 45rem;
     }
     .navbar{
-        padding: 1rem 5rem;
+        padding: 1.5rem 3.5rem;
+    }
+    .carousel-img{
+        max-height: 40rem;
     }
 }
 
+/* ------------------------------ Weather CSS --------------------------- */
 
-.err-img{
-   height: 40rem;
+.weather_data{
+    height: 100vh;
 }
 
-.err-con{
-    height: 100vh;
-    width: 100%;
-    border: 5px solid black;
-    padding-top: 20rem;
-    display: flex;
-    justify-content: center;
- }
-
-
-
-
-
- /* weather */
-
 .tempInformation {
+    /* border: 5px solid black; */
     width: 30rem;
     margin: auto;
-    height: 30rem;
+    height: 25rem;
     background-color: #323544;
     border-radius: 1rem;
     font-family: "Roboto", sans-serif;
 }
+
 .top_layer {
+    /* border: 5px solid black; */
     width: 100%;
     height: 20%;
     background-color: #2d303d;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     border-radius: 1rem;
     padding: 2rem 0;
@@ -230,10 +218,10 @@ footer p {
     height: 80%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 2rem 4rem;
 }
+
 .main_layer #city_name {
-    padding: 2rem 0;
     color: #bfc1c8;
     font-weight: 300;
     font-size: 2rem;
@@ -243,19 +231,22 @@ footer p {
     display: flex;
     justify-content: space-around;
     color:#fff;
+    padding: 2rem;
 }
+
 .main_layer .middle_layer p,
-.main_layer .middle_layer .fa {
-    font-size: 7rem;
+.main_layer .middle_layer .faicon,
+.main_layer .middle_layer .sup {
+    font-size: 5rem;
     font-weight: 900;
 }
 
-.fa {
-    color: #009ad8;
+.fa-sharp {
+    color: red;
 }
 
 sup{
-    font-size: 6rem;
+    font-size: 5rem;
     margin-top: -2rem;
 }
 
@@ -264,27 +255,21 @@ sup{
     transition: all 0.3s linear;
 }
 
+.celcius{
+    margin-right: 2rem;
+}
+
     
-/* weather input */
+/* ------------------------------ Weather Input CSS --------------------------- */
 
 .main_content{
     z-index: -1;
 }
 
 .temp_form {
-    width: 50%;
+    width: 70%;
     position: relative; 
-    margin: 10rem auto 4rem;
-}
-
-@media (max-width: 768px) {
-    .temp_form {
-        min-width: 80%;
-    }
-    .about-img{
-        min-width: auto;
-        height: 50vh;
-    }
+    margin: 12rem auto 4rem;
 }
         
 .temp_form input[type="text"] { 
@@ -302,14 +287,15 @@ sup{
     color: #bfc1c8;
 }
 
-.temp_form input[type="submit"]{
+.temp_form #submitBtn{
     position: absolute;
     top: 7px;
     right: 7px; 
     bottom: 7px;
+    min-width: 10rem;
+    margin-left: 10rem;
     border: none;
-    background: #009ad8; 
-    padding:0 3rem;
+    background: #009ad8;
     border-radius: 3rem;
     color: white;
     font-size: 1.6rem;
@@ -319,3 +305,31 @@ sup{
     color: #009ad8;
     background-color:#fff;
 }
+
+@media (max-width: 768px) {
+    .temp_form {
+        min-width: 80%;
+    }
+    .about-img{
+        /* border: 5px solid black; */
+        height: auto; 
+        max-width: 35rem;
+        position: relative;
+        top: -2rem;
+    }
+}
+
+/* ------------------------------ 404 Error Page CSS --------------------------- */
+
+.err-img{
+    height: 40rem;
+}
+ 
+.err-con{
+    height: 100vh;
+    width: 100%;
+    border: 5px solid black;
+    padding-top: 20rem;
+    display: flex;
+    justify-content: center;
+ }
