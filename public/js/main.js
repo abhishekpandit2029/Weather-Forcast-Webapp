@@ -5,7 +5,7 @@ const temp_real_value = document.getElementById("temp_real_value")
 const temp_status = document.getElementById("temp_status")
 const data_hide = document.querySelector('.middle_layer')
 const daytoday = document.getElementById("daytoday")
-const today_date = document.getElementById("today_date")
+const today_date = document.getElementById("today_date") 
 const month = document.getElementById("month")
 const year = document.getElementById("year")
 

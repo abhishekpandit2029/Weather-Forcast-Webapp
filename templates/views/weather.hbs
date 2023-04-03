@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {{!-- Head Links --}}
     {{>headlinks}}
 </head>
+
 <body>
     <!-- navbar -->
     {{>navbar}}
@@ -22,19 +24,20 @@
                 <div class="tempInformation">
                     <div class="top_layer">
                         <p><span id="daytoday" class="mx-2"></span><span><b>-</b></span>
-                        <span id="today_date" class="mx-1"></span>
-                        <span id="month" class="mx-1"></span>
-                        <span id="year" class="mx-1"></span></p>
+                            <span id="today_date" class="mx-1"></span>
+                            <span id="month" class="mx-1"></span>
+                            <span id="year" class="mx-1"></span>
+                        </p>
                     </div>
                     <div class="main_layer">
                         <p id="city_name">Get Output Here</p>
                         <div class="middle_layer data_hide">
-                            <p id="temp"><span id="temp_real_value">0</span><sup>o</sup><span class="celcius">C</span></p>
+                            <p id="temp"><span id="temp_real_value">0</span><sup>o</sup><span class="celcius">C</span>
+                            </p>
                             <p id="temp_status"> <i class="fa-solid fa-cloud faicon"></i> </p>
                         </div>
                     </div>
-                </div> 
-
+                </div>
             </div>
         </div>
     </div>
@@ -43,4 +46,5 @@
     {{>footer}}
     <script src="js/main.js"></script>
 </body>
+
 </html>

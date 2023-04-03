@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz@8..30&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:opsz@8..30&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Piazzolla', serif;
+    font-family: "Piazzolla", serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -17,48 +18,51 @@ html {
     /* 1rem = 10px */
 }
 
-body{
+body {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.row{
+.row {
     margin: 0;
 }
 
 /* ------------------------------ Navbar CSS --------------------------- */
 
-.main_menu{
+.main_menu {
     background-color: var(--main-bg);
+    height: 8vh;
 }
 
-.navbar{
-    position: fixed;
+.navbar {
     top: 0;
     width: 100%;
     left: 0;
     z-index: 1;
     background-color: var(--main-bg);
-    padding: 1rem 12rem;
+    padding: 1rem 0rem;
+    height: 8vh;
 }
 
-.navtitle{
+.navtitle {
     font-size: 2.5rem;
     font-weight: 600;
+    position: relative;
+    left: -10px;
 }
 
-.navbar a{
+.navbar a {
     color: #fff;
     font-size: 1.8rem;
 }
 
-.navbar li{
+.navbar li {
     margin: 5px 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 }
 
-.navbar a:visited{
+.navbar a:visited {
     color: #fff;
 }
 
@@ -72,7 +76,7 @@ body{
     height: 3rem;
 }
 
-.snow{
+.snow {
     transition: all linear;
     animation: rotation 2s linear infinite;
     color: var(--main-color);
@@ -82,6 +86,7 @@ body{
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -89,22 +94,22 @@ body{
 
 /* ------------------------------ Main Header CSS--------------------------- */
 
-
-.main_header_left{
-    height: 100vh;
+.main_header_left {
+    /* border: 1px solid red; */
+    height: 84vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.main_header_left p{
+.main_header_left p {
     font-size: 2rem;
 }
 
-.main_header_left h1{
+.main_header_left h1 {
     font-size: 4rem;
-    margin: 1rem 0 4rem 0;
+    margin: 0rem 0 4rem 0;
     text-transform: capitalize;
 }
 
@@ -125,72 +130,108 @@ body{
     box-shadow: 0 8px 6px -6px var(--main-color);
 }
 
-.main_header_right{
-    /* border: 5px solid black; */
+.main_header_right {
+    /* border: 1px solid red; */
+    height: 84vh;
     display: flex;
-    height: 100vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
-.carousel-img{
-    height: 50rem;
+@media screen and (max-width: 991px) {
+    .main_header_left h1 {
+        margin-bottom: -40px;
+    }
+
+    .main_header_left {
+        height: 34vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_header_left p {
+        margin-top: -100px;
+        font-size: 1.8rem;
+    }
+
+    .main_header_left {
+        height: 34vh;
+    }
+
+    .main_header_left h1 {
+        font-size: 3rem;
+    }
+
+    .navtitle {
+        left: -70px;
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* .navtitle{
+        left: -70px;
+    } */
+}
+
+@media screen and (max-width: 400px) {
+    .navtitle {
+        left: -40px;
+    }
 }
 
 /* ------------------------------ Footer CSS --------------------------- */
 
 footer {
+    height: 8vh;
     width: 100%;
     background-color: var(--main-bg);
     margin-top: auto;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
     margin: 0;
     text-align: center;
-    color:#fff;
+    color: #fff;
     line-height: 6rem;
     font-size: 1.4rem;
 }
-
 
 @media (max-width: 768px) {
     .main_header_left {
         height: auto;
         padding: 13rem 0rem 0rem;
     }
-    .main_header_right{
-        height: 38rem;
-    }
-    .carousel-img{
-        height: 45rem;
-    }
-    .navbar{
+
+    .navbar {
         padding: 1.5rem 6rem;
-    }
-    .carousel-img{
-        max-height: 40rem;
     }
 }
 
 @media (max-width: 400px) {
-    .navbar{
+    .navbar {
         padding: 1.5rem 3rem;
     }
 }
 
-
 /* ------------------------------ Weather CSS --------------------------- */
 
-.weather_data{
-    height: 100vh;
+.weather_data {
+    /* border: 1px solid black; */
+    height: auto;
+    padding: 0 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tempInformation {
     /* border: 5px solid black; */
     width: 30rem;
-    margin: auto;
     height: 25rem;
     background-color: #323544;
     border-radius: 1rem;
@@ -199,7 +240,6 @@ footer p {
 
 .top_layer {
     /* border: 5px solid black; */
-    width: 100%;
     height: 25%;
     background-color: #2d303d;
     display: flex;
@@ -209,9 +249,9 @@ footer p {
     border-radius: 1rem;
     padding: 2rem 0;
 }
-   
+
 .top_layer p {
-    color:#fff;
+    color: #fff;
     font-weight: 300;
     padding: 3rem;
     font-size: 1.5rem;
@@ -235,7 +275,7 @@ footer p {
 .main_layer .middle_layer {
     display: flex;
     justify-content: space-around;
-    color:#fff; 
+    color: #fff;
 }
 
 .main_layer .middle_layer p,
@@ -249,65 +289,76 @@ footer p {
     color: red;
 }
 
-sup{
+sup {
     font-size: 4rem;
     margin-top: -2rem;
 }
 
-#navsup{
+#navsup {
     font-size: 2rem;
 }
 
-.data_hide{
+.data_hide {
     visibility: hidden;
     transition: all 0.3s linear;
 }
 
-.celcius{
+.celcius {
     margin-right: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .tempInformation {
-        height: 20rem;
+        width: 27rem;
+        height: 25rem;
     }
+
     .main_layer {
         padding: 2rem 3rem;
     }
 }
 
-    
+@media screen and (max-width: 575px) {
+    .tempInformation {
+        height: 20rem;
+    }
+
+    .main_layer {
+        padding: 2rem 3rem;
+    }
+}
+
 /* ------------------------------ Weather Input CSS --------------------------- */
 
-.main_content{
+.main_content {
     z-index: -1;
 }
 
 .temp_form {
-    width: 70%;
-    position: relative; 
-    margin: 12rem auto 4rem;
+    width: 500px;
+    position: relative;
+    margin: 0rem 0 4rem -100px;
 }
-        
-.temp_form input[type="text"] { 
-    width: 100%; 
-    padding: 2rem 5rem 2rem 2rem; 
+
+.temp_form input[type="text"] {
+    width: 500px;
+    padding: 2rem 5rem 2rem 3rem;
     background: #1e202b;
-    color: white; 
+    color: white;
     outline: none;
-    border: none; 
+    border: none;
     font-size: 1.7rem;
-    border-radius: 4rem; 
+    border-radius: 4rem;
 }
-        
+
 ::placeholder {
     color: #bfc1c8;
 }
 
-.temp_form #submitBtn{
+.temp_form #submitBtn {
     position: absolute;
     top: 7px;
-    right: 7px; 
+    right: 7px;
     bottom: 7px;
     min-width: 10rem;
     margin-left: 10rem;
@@ -318,34 +369,67 @@ sup{
     font-size: 1.6rem;
 }
 
-.temp_form input[type="submit"]:hover{
+.temp_form input[type="submit"]:hover {
     color: #009ad8;
-    background-color:#fff;
+    background-color: #fff;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .temp_form {
-        min-width: 80%;
+        margin-top: 0px;
     }
-    .about-img{
-        /* border: 5px solid black; */
-        max-width: 35rem;
-        position: relative;
-        top: -2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main_content {
+        margin-top: 50px;
+    }
+
+    .temp_form,
+    .temp_form input[type="text"] {
+        width: 400px;
+    }
+
+    .temp_form input[type="text"] {
+        padding: 1.5rem 4.5rem 1.5rem 2rem;
+    }
+
+    .temp_form {
+        margin: 0rem 0 4rem -60px;
+    }
+
+    .temp_form #submitBtn {
+        min-width: 8rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .temp_form,
+    .temp_form input[type="text"] {
+        width: 270px;
+    }
+
+    .temp_form {
+        margin: 0rem 0 4rem 0px;
+    }
+
+    .main_content {
+        margin-top: 70px;
     }
 }
 
 /* ------------------------------ 404 Error Page CSS --------------------------- */
 
-.err-img{
+.err-img {
     height: 40rem;
 }
- 
-.err-con{
+
+.err-con {
     height: 100vh;
     width: 100%;
     border: 5px solid black;
     padding-top: 20rem;
     display: flex;
     justify-content: center;
- }
+}
