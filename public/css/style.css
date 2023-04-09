@@ -31,7 +31,6 @@ body {
 /* ------------------------------ Navbar CSS --------------------------- */
 
 .main_menu {
-    background-color: var(--main-bg);
     height: 8vh;
 }
 
@@ -40,7 +39,7 @@ body {
     width: 100%;
     left: 0;
     z-index: 1;
-    background-color: var(--main-bg);
+    /* background-color: var(--main-bg); */
     padding: 1rem 0rem;
     height: 8vh;
 }
@@ -49,31 +48,9 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     position: relative;
+    top: 5px;
     left: -10px;
-}
-
-.navbar a {
-    color: #fff;
-    font-size: 1.8rem;
-}
-
-.navbar li {
-    margin: 5px 10px;
-    font-family: "Courier New", Courier, monospace;
-}
-
-.navbar a:visited {
-    color: #fff;
-}
-
-.navbar a:hover {
-    color: var(--main-color);
-}
-
-.navbar-toggler {
-    background-color: white;
-    width: 4rem;
-    height: 3rem;
+    color: black;
 }
 
 .snow {
@@ -184,21 +161,21 @@ body {
 footer {
     height: 8vh;
     width: 100%;
-    background-color: var(--main-bg);
+    /* background-color: var(--main-bg); */
     margin-top: auto;
-
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    color: black;
 }
 
 footer p {
     margin: 0;
     text-align: center;
-    color: #fff;
     line-height: 6rem;
     font-size: 1.4rem;
+    font-family: "Piazzolla", serif;
 }
 
 @media (max-width: 768px) {
@@ -417,19 +394,4 @@ sup {
     .main_content {
         margin-top: 70px;
     }
-}
-
-/* ------------------------------ 404 Error Page CSS --------------------------- */
-
-.err-img {
-    height: 40rem;
-}
-
-.err-con {
-    height: 100vh;
-    width: 100%;
-    border: 5px solid black;
-    padding-top: 20rem;
-    display: flex;
-    justify-content: center;
 }
